@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   RegelFehler,
+  gemeinschaftAuszahlen,
+  gemeinschaftEinrichten,
   ereignisBezahlen,
   fremdeEntscheiden,
   naechstePhase,
@@ -286,4 +288,16 @@ test('Ideale Verteilung bis zum Ende der Kurzvariante bleibt spielbar', () => {
   s = spieleBis(s, 1, 'abrechnung');
   assert.equal(s.stabilitaet, 10);
   assert.equal(s.status, 'laeuft');
+});
+
+test('Unbekannte: Die Energie aus dem Vorrat kann die Konferenz verteilen; Verwalter lässt sich nachtragen', () => {
+  let s = weiter(reichesSpiel(), 2, 'handel');
+  s = fremdeEntscheiden(s, 'mitQuarantaene', { wuerfel: wuerfelMit(2) });
+  s = ereignisBezahlen(s, 'fremde');
+  s = weiter(s, 3, 'handel');
+  s = gemeinschaftAuszahlen(s, 'techniker', { E: 3 });
+  assert.equal(s.gemeinschaftsvorrat.bestand.E, 0);
+  s = gemeinschaftEinrichten(s, { verwalter: 'sanitaeter', ordnung: 'nach Bedarf' });
+  assert.equal(s.gemeinschaftsvorrat.verwalter, 'sanitaeter');
+  assert.throws(() => gemeinschaftEinrichten(s, { verwalter: 'techniker' }), RegelFehler);
 });

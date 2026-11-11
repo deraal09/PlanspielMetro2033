@@ -119,6 +119,17 @@ export const CONFIG = frieren({
       krankheitskarten: [3, 4, 5], // Medikamente je Runde
       ereignisse: { letzterFilter: 1, fremde: 2, notstand: 3 },
       notstandFristMinuten: 5,
+      // Zeitplan aus dem Ablaufplan der Spielleitung (Minuten, Summe = Dauer).
+      // Dient später dem Timer; der Regelkern selbst nutzt ihn nicht.
+      zeitplan: [
+        { name: 'Zusammenbruch', minuten: 8 },
+        { name: 'Gruppenberatung', minuten: 10 },
+        { name: 'Runde 1: Freier Handel', minuten: 14 },
+        { name: 'Runde 2: Regierungsbildung', minuten: 20 },
+        { name: 'Runde 3: Krise', minuten: 18 },
+        { name: 'Auswertung', minuten: 18 },
+        { name: 'Ausblick', minuten: 2 },
+      ],
       vertragsartikel: [
         'Regierungsform',
         'Machtverteilung',
@@ -137,6 +148,13 @@ export const CONFIG = frieren({
       krankheitskarten: [3, 5],
       ereignisse: { letzterFilter: 1, notstand: 2 },
       notstandFristMinuten: 3,
+      zeitplan: [
+        { name: 'Zusammenbruch', minuten: 5 },
+        { name: 'Gruppenberatung', minuten: 5 },
+        { name: 'Runde 1: Freier Handel', minuten: 12 },
+        { name: 'Runde 2: Ordnung und Krise', minuten: 16 },
+        { name: 'Auswertung', minuten: 7 },
+      ],
       vertragsartikel: [
         'Regierungsform und Macht',
         'Ressourcen',

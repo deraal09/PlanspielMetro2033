@@ -359,6 +359,9 @@ function loeseFremdeAuf(s, fremde, buchungen) {
   if (fremde.entscheidung === 'ablehnen') return; // gewürfelt wird nur zur Auflösung
 
   if (wahrheit) {
+    // Die Konferenz entscheidet über die Verteilung; der Vorrat ist damit nutzbar,
+    // auch wenn noch kein Verwalter festgelegt wurde.
+    s.gemeinschaftsvorrat.eingerichtet = true;
     s.gemeinschaftsvorrat.bestand = addiere(
       s.gemeinschaftsvorrat.bestand,
       marker(cfg.wahrheit.gemeinschaftsvorrat),
@@ -407,7 +410,7 @@ export function tausche(zustand, { a, b, gibtA = {}, gibtB = {} }) {
 export function gemeinschaftEinrichten(zustand, { verwalter, ordnung = '' }) {
   pruefePhase(zustand, AKTIONS_PHASEN, 'Gemeinschaftsvorrat');
   pruefeGruppe(verwalter);
-  if (zustand.gemeinschaftsvorrat.eingerichtet) {
+  if (zustand.gemeinschaftsvorrat.verwalter) {
     throw new RegelFehler('Der Gemeinschaftsvorrat ist bereits eingerichtet.');
   }
   const s = klon(zustand);

@@ -48,3 +48,15 @@ test('Die Konfiguration ist schreibgeschützt', () => {
     CONFIG.stabilitaet.start = 99;
   });
 });
+
+test('Zeitplan: Summe der Minuten entspricht der Dauer der Variante', () => {
+  for (const v of Object.values(CONFIG.varianten)) {
+    assert.equal(v.zeitplan.reduce((s, z) => s + z.minuten, 0), v.dauerMinuten);
+  }
+});
+
+test('Spielzeit insgesamt 48 Stunden in beiden Varianten', () => {
+  for (const v of Object.values(CONFIG.varianten)) {
+    assert.equal(v.runden * v.spielzeitStundenProRunde, 48);
+  }
+});

@@ -1,6 +1,6 @@
 # Offene Fragen und Annahmen zum Regelkern
 
-Die Spielbeschreibung lässt einige Punkte offen. Der Regelkern trifft dafür jeweils eine **Annahme**, damit er lauffähig und testbar ist. Bitte prüfen. Jede Annahme lässt sich in `src/regeln/` leicht ändern; die Tests zeigen, wo.
+Die Spielbeschreibung lässt einige Punkte offen. Der Regelkern trifft dafür jeweils eine **Annahme**, damit er lauffähig und testbar ist. Bitte prüfen. Der Abgleich mit dem Material steht in [abgleich-material.md](abgleich-material.md); er hat die Punkte 4, 5 und 6 geklärt (unten markiert). Jede Annahme lässt sich in `src/regeln/` leicht ändern; die Tests zeigen, wo.
 
 ## Bitte entscheiden (wirken sich spürbar auf das Spiel aus)
 
@@ -9,9 +9,9 @@ Die Spielbeschreibung lässt einige Punkte offen. Der Regelkern trifft dafür je
 | 1 | **Referenzwert Vollvariante Runde 3** („E fehlt 3, M Rest 0“): Von welchem Ausgang in Runde 2 geht er aus? | Die Fremden sagen die **Wahrheit** (+3 E). Nur dann ergibt sich E fehlt 3. Bei „Seuche“ fehlen in Runde 3 stattdessen E 5 und M 1. Der Test `referenz.test.js` hält das fest. |
 | 2 | **Zwangsmaßnahme der Wächter:** Wohin gehen die eingezogenen Marker? | Zu den **Wächtern** (Bestand der Wächter). Alternativen: Bank oder Gemeinschaftsvorrat. |
 | 3 | **Seuche** (Runde 2): Aus wessen Beständen kommen die zusätzlichen Medikamente (mit Quarantäne 1, ohne 3), und was gilt, wenn sie fehlen? | Wie bei der Krankheitskarte aus **beliebigen Beständen**, automatisch in der Abrechnung. Fehlende Medikamente bleiben **ohne** Stabilitätsstrafe offen. |
-| 4 | **+3 Energie bei „Wahrheit“:** Was, wenn noch kein Gemeinschaftsvorrat beschlossen wurde? | Die Energie liegt im Vorrat, der aber erst nach dem Beschluss („eingerichtet“) ausgezahlt werden kann. |
-| 5 | **Stabilitätsverrechnung:** Gilt die Obergrenze 10 je Einzelbuchung oder für die Summe der Runde? | Alle Änderungen einer Runde werden **addiert**, dann auf 0–10 begrenzt. Beispiel: Stabilität 10, alle Gruppen Stufe 1 (+1) und Krankheitskarte nicht bezahlt (−1) ergibt 10. |
-| 6 | **Gruppenpunkte:** Gibt es außer den 3 Punkten der Geheimkarte weitere? Wer entscheidet, ob die Geheimkarte erfüllt ist? | Nur Geheimkarten. Die **Lehrkraft** wertet nach Spielende. |
+| 4 | ✔ **geklärt:** +3 Energie bei „Wahrheit“ ohne beschlossenen Vorrat. | Das Material: Die Energie kommt in die Schale, die Konferenz verteilt. Der Vorrat ist danach nutzbar. |
+| 5 | ✔ **geklärt:** Obergrenze 10 je Einzelbuchung oder für die Summe der Runde? | Das Rundenprotokoll hat je Runde eine Änderung. Alle Änderungen einer Runde werden **addiert**, dann auf 0–10 begrenzt. Beispiel: Stabilität 10, alle Gruppen Stufe 1 (+1) und Krankheitskarte nicht bezahlt (−1) ergibt 10. |
+| 6 | ✔ **geklärt:** Weitere Gruppenpunkte? Wer wertet die Geheimkarte? | Nur Geheimkarten, die **Lehrkraft** wertet (Rundenprotokoll). |
 
 ## Annahmen ohne große Wirkung (zur Kenntnis)
 
