@@ -1,0 +1,12 @@
+{
+  "name": "endstation-7",
+  "version": "0.1.0",
+  "description": "Digitale Umsetzung des Planspiels „Metro 2033: Die letzte Demokratie“ (Regelkern)",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test"
+  }
+}

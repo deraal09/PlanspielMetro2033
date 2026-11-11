@@ -1,0 +1,30 @@
+# Abhängigkeiten und Build
+node_modules/
+dist/
+build/
+
+# Zugangsdaten und lokale Konfiguration
+.env
+.env.*
+!.env.example
+
+# Laufzeitdaten (Spielstände, Datenbanken, Logs)
+data/
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# Editor und Betriebssystem
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# LaTeX-Zwischendateien (material/)
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
