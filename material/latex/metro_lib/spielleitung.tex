@@ -1,0 +1,172 @@
+% ============================================================
+% Teil A: Spielleitung (nur für die Lehrkraft)
+% ============================================================
+\titelseite
+
+Ein politisches Planspiel für fünf Gruppen nach dem Vorbild der Inseldemokratie. Statt auf einer Insel stranden die Schülerinnen und Schüler (SuS) in der Metrostation \textbf{Endstation 7}. Jede Gruppe kontrolliert ein lebenswichtiges Gut, keine Gruppe kann allein überleben. Innerhalb von 48 Stunden Spielzeit müssen sie sich auf eine Regierungsform und auf Regeln für die Verteilung der knappen Güter einigen.
+
+\clearpage
+\abschnitt{Spielleitung: Überblick}
+
+\begin{lkbox}[title={Auf einen Blick},fonttitle=\bfseries]
+\begin{itemize}
+  \item \textbf{Dauer:}
+    \ifkurz 45 Minuten, zwei Spielrunden zu je 24 Stunden Spielzeit.
+    \else 90 Minuten (Doppelstunde), drei Spielrunden zu je 16 Stunden Spielzeit.\fi
+  \item \textbf{Gruppen:} fünf Gruppen mit je 4 bis 6 Personen (20 bis 30 SuS). Bei kleineren Kursen bleiben es fünf Gruppen mit je 3 bis 4 Personen.
+  \item \textbf{Ihre Rolle:} Bank (Marker ausgeben und einsammeln), Stationslautsprecher (Durchsagen, Ereigniskarten) und Moderation. Sie entscheiden nicht über das Ergebnis.
+  \item \textbf{Besonderheit:} Jede Gruppe erhält eine \emph{Geheimkarte} mit einem Vertragsziel. Erst nach der Auflösung zeigt sich, wer seine Interessen durchsetzen konnte.
+\end{itemize}
+\end{lkbox}
+
+\subsection*{Lernziele}
+Die SuS \ldots
+\begin{enumerate}
+  \item erklären, wie Knappheit, Abhängigkeit und Machtposition die Wahl einer Regierungsform beeinflussen,
+  \item vergleichen Regierungsformen (direkte und repräsentative Demokratie, autoritäre Führung, Technokratie, Föderation) anhand von Kriterien wie Entscheidungsgeschwindigkeit, Gerechtigkeit, Machtbegrenzung, Versorgungssicherheit und Konfliktlösung,
+  \item verhandeln Interessen, schließen Kompromisse und bewerten Legitimität und Stabilität des Ergebnisses,
+  \item diskutieren, wie viel Macht eine Regierung und die Sicherheitskräfte im Notstand erhalten dürfen.
+\end{enumerate}
+
+\subsection*{Vorbereitung (ca.\ 20 Minuten)}
+\begin{itemize}
+  \item \textbf{Ausdrucken:} Das Schülermaterial beginnt ab Seite~\pageref{mat:start}. Regelkarte (1$\times$ je Gruppe), Gruppenkarten (1$\times$ je Gruppe), Geheimkarten (ausschneiden, verdeckt austeilen), Arbeitsblatt, Bilanzblatt (1$\times$ je Gruppe), Infokarten (1 Satz je Gruppe), Stationsschilder, Ereignis- und Krankheitskarten (Lehrkraft), \textbf{Marker auf festes Papier} (ausschneiden und nach Gut sortieren), Stabilitätsleiste und Rundenprotokoll (Lehrkraft), Regierungsvertrag (1$\times$ für die Konferenz).
+  \item \textbf{Sonstiges:} \ifkurz sichtbarer Timer (Beamer-Countdown), \else 1 Würfel (W6) für Ereignis~2, sichtbarer Timer (Beamer-Countdown), \fi 5 Schalen oder Umschläge für die Marker, 1 Schale für den Gemeinschaftsvorrat, ein Magnet oder eine Büroklammer für die Stabilitätsleiste.
+  \item \textbf{Raum:} Fünf Gruppentische als \enquote{Stationen} an den Wänden mit Stationsschildern, in der Raummitte der Konferenztisch (\enquote{Metro-Konferenz}), dort liegen auch Gemeinschaftsvorrat und Regierungsvertrag. Gedimmtes Licht und Tunnelgeräusche unterstützen die Atmosphäre, sollen die Verhandlung aber nicht überdecken.
+\end{itemize}
+
+\subsection*{Raumplan}
+\raumplan
+
+\subsection*{Spielprinzip}
+Alle Güter sind \textbf{Marker}: \rN\,Nahrung, \rW\,Wasser, \rE\,Energie, \rM\,Medikamente, \rS\,Schutzmaterial. Jede Gruppe startet nur mit ihrem eigenen Gut. Die Betriebskosten zwingen sie, mindestens drei andere Güter einzutauschen (niemand kann sich selbst versorgen).
+
+\begin{center}
+{\renewcommand{\arraystretch}{1.3}\small
+\begin{tabular}{|l|l|c|c|c|c|c|c|c|}
+\hline
+\textbf{Gruppe} & \textbf{Gut} & \textbf{Start} & \textbf{Prod.} & \multicolumn{5}{c|}{\textbf{Betriebskosten je Runde}} \\ \hline
+ & & & & \rN & \rW & \rE & \rM & \rS \\ \hline
+Hydroponiker & Nahrung & 6 & 6 & 1 & 2 & 2 & -- & 1 \\ \hline
+Wasserwerker & Wasser & 6 & 6 & 1 & 1 & 2 & -- & 1 \\ \hline
+Techniker & Energie & 5 & 6 & 1 & 1 & 1 & -- & 1 \\ \hline
+Sanitäter & Medikamente & 4 & 3 & 1 & 1 & 2 & -- & -- \\ \hline
+Wächter & Schutzmaterial & 5 & 3 & 1 & 1 & 1 & -- & -- \\ \hline
+\textbf{Summe} & & & & \textbf{5} & \textbf{6} & \textbf{8} & -- & \textbf{3} \\ \hline
+\end{tabular}}
+\end{center}
+
+\noindent Medikamente haben keine Betriebskosten. Sie werden über die \textbf{Krankheitskarte} verbraucht:
+\ifkurz
+Runde~1: 3 Medikamente, Runde~2: 5 Medikamente.
+\else
+Runde~1: 3, Runde~2: 4, Runde~3: 5 Medikamente.
+\fi
+
+\paragraph{Rundenablauf.}
+\phase{1}~Produktion (Bank gibt die Produktionsmarker aus; in Runde~1 zusätzlich zum Anfangsvorrat) $\rightarrow$
+\phase{2}~Handel und Verhandlung $\rightarrow$
+\phase{3}~politische Entscheidungen (ab Runde~2) $\rightarrow$
+\phase{4}~Betriebskosten an die Bank zahlen $\rightarrow$
+\phase{5}~Krankheitskarte, Ereignis und Abrechnung.
+
+\paragraph{Stufen.}
+Stufe~1 Normalbetrieb: alle Betriebskosten bezahlt. Stufe~2 eingeschränkt: bis zur Hälfte der Kosten unbezahlt, die Produktion der Gruppe halbiert sich in der \emph{nächsten} Runde (aufgerundet). Stufe~3 Stillstand: mehr als die Hälfte unbezahlt, die Gruppe produziert in der nächsten Runde nichts und kostet 1 Stabilität. Die Betriebskosten (Summe aller Gruppen: 22 Marker) sind \emph{keine} Strafe, sondern der Grund zum Handeln.
+
+\paragraph{Stabilität.}
+Die Station startet mit \textbf{10 Stabilitätspunkten} (Marker auf die Leiste). Sie verändern sich nur am Rundenende oder durch Ereignisse:
+
+\begin{center}
+{\renewcommand{\arraystretch}{1.25}\small
+\begin{tabular}{|p{10.2cm}|c|}
+\hline
+\textbf{Auslöser} & \textbf{Stabilität} \\ \hline
+Alle fünf Gruppen sind am Rundenende in Stufe~1 & $+1$ (höchstens 10) \\ \hline
+Eine Gruppe steht am Rundenende in Stufe~3 (je Gruppe) & $-1$ \\ \hline
+Krankheitskarte nicht vollständig bezahlt & $-1$ \\ \hline
+Ereignis bis Rundenende nicht verbindlich entschieden bzw.\ Auftrag nicht erfüllt & $-2$ \\ \hline
+Zwangsmaßnahme der Wächter ohne Beschluss der Konferenz & $-2$ \\ \hline
+\ifkurz\else Aufnahme der Fremden ohne Quarantäne bei Seuche (Würfel 5--6) & $-1$ \\ \hline\fi
+\end{tabular}}
+\end{center}
+
+\paragraph{Sonderregeln (auch auf der Regelkarte).}
+\textbf{Gemeinschaftsvorrat:} Die Gruppen dürfen beschließen, Marker in einen gemeinsamen Vorrat zu legen. Wer ihn verteilt, entscheidet die Ordnung, die sie vereinbaren. \textbf{Verträge} dürfen schriftlich festgehalten werden, sind aber nicht automatisch durchsetzbar: Bruch erzwingt eine Entscheidung der Konferenz. \textbf{Regierung braucht Marker:} Ein Beschluss ersetzt keine Marker; was nicht vorhanden ist, kann nicht verteilt werden. \textbf{Zwangsmaßnahme:} Die Wächter dürfen \emph{einmal pro Spiel} bis zu 2 Marker einer Gruppe einziehen. Mit Beschluss der Konferenz kostet das nichts, ohne Beschluss $-2$ Stabilität.
+
+\clearpage
+\subsection*{Ablaufplan}
+\setlength{\parindent}{0pt}
+\begin{center}
+{\renewcommand{\arraystretch}{1.25}\small
+\ifkurz
+\begin{longtable}{|p{1.5cm}|p{3.5cm}|p{\dimexpr\textwidth-5cm-6\tabcolsep-4\arrayrulewidth\relax}|}
+\hline
+\textbf{Zeit} & \textbf{Phase} & \textbf{Inhalt und Ihre Aufgabe} \\ \hline
+\endhead
+0--5 & \textbf{1~Zusammenbruch} & Kurzdurchsage vorlesen (1~Min.). Gruppen bilden, Gruppenkarten, Regelkarte, Marker und Bilanzblatt verteilen (4~Min.). \\ \hline
+5--10 & \textbf{2~Gruppenberatung} & Arbeitsblatt Aufgabe~1 und~2: Lage analysieren, drei Interessen und rote Linie festlegen, Wunsch-Regierungsform wählen. Gruppe bestimmt Buchführung und Delegation (2 bis 3 Personen). \emph{Geheimkarten verdeckt austeilen.} \\ \hline
+10--22 & \textbf{3~Runde 1: Freier Handel} & Produktion ausgeben (1~Min.). Handel und Verhandlung, noch keine Regierung (6~Min.). Betriebskosten, Krankheitskarte~1, Abrechnung und Stabilität (3~Min.). \emph{Ereignis~1 \enquote{Der letzte Filter}} verlesen (2~Min.). \\ \hline
+22--38 & \textbf{4~Runde 2: Ordnung und Krise} & Produktion ausgeben (1~Min.). Metro-Konferenz: Regierungsvertrag Artikel~1 bis~4 (7~Min.). \emph{Ereignis~3 \enquote{Der Notstand}} und verbindliche Entscheidung (3~Min.). Betriebskosten, Krankheitskarte~2, Abrechnung (3~Min.). Vertrag unterzeichnen (2~Min.). \\ \hline
+38--45 & \textbf{5~Auswertung} & Rollen ablegen. Stabilität ablesen, Geheimaufträge aufdecken (2~Min.). Drei Leitfragen im Plenum (4~Min.). Abschlussfrage (1~Min.). Aufgabe~5 als Hausaufgabe. \\ \hline
+\end{longtable}
+\else
+\begin{longtable}{|p{1.5cm}|p{3.5cm}|p{\dimexpr\textwidth-5cm-6\tabcolsep-4\arrayrulewidth\relax}|}
+\hline
+\textbf{Zeit} & \textbf{Phase} & \textbf{Inhalt und Ihre Aufgabe} \\ \hline
+\endhead
+0--8 & \textbf{1~Zusammenbruch} & Durchsage vorlesen (2~Min.). Gruppen bilden, Gruppenkarten, Regelkarte, Marker und Bilanzblatt verteilen, Regeln kurz erklären (6~Min.). \\ \hline
+8--18 & \textbf{2~Gruppenberatung} & Arbeitsblatt Aufgabe~1 bis~3: Lage analysieren, drei Interessen und rote Linie festlegen, Wunsch-Regierungsform wählen, Angebot vorbereiten. Gruppe bestimmt Buchführung und Delegation (2 bis 3 Personen). \emph{Geheimkarten verdeckt austeilen.} \\ \hline
+18--32 & \textbf{3~Runde 1: Freier Handel} & Produktion ausgeben (1~Min.). Handel und Verhandlung, noch keine Regierung (8~Min.). Betriebskosten, Krankheitskarte~1, Abrechnung (3~Min.). \emph{Ereignis~1 \enquote{Der letzte Filter}} verlesen (2~Min.). \\ \hline
+32--52 & \textbf{4~Runde 2: Regierungsbildung} & Produktion ausgeben (1~Min.). Metro-Konferenz: Regierungsform, Machtverteilung und Versorgung, Reparatur klären, Vertrag Artikel~1 bis~3, Abstimmung (13~Min.). \emph{Ereignis~2 \enquote{Unbekannte im Tunnel}} (3~Min.). Betriebskosten, Krankheitskarte~2, Abrechnung (3~Min.). \\ \hline
+52--70 & \textbf{5~Runde 3: Krise} & Produktion ausgeben (1~Min.). \emph{Ereignis~3 \enquote{Der Notstand}}: verbindliche Entscheidung (5~Min.). Handel und Verteilung nach der beschlossenen Ordnung (6~Min.). Betriebskosten, Krankheitskarte~3, Abrechnung (3~Min.). Vertrag Artikel~4 bis~7 abschließen und unterzeichnen (3~Min.). \\ \hline
+70--88 & \textbf{6~Auswertung} & Rollen ablegen, Marker einsammeln (2~Min.). Stabilität ablesen, Geheimaufträge aufdecken, Würfelergebnis zu Ereignis~2 verraten (4~Min.). Plenum anhand der Leitfragen (10~Min.). Abschlussfrage (2~Min.). \\ \hline
+88--90 & Ausblick & Aufgabe~5 (Rückblick) als Hausaufgabe oder Sicherung. \\ \hline
+\end{longtable}
+\fi}
+\end{center}
+
+\subsection*{Ereignisse und Auflösung (nur Lehrkraft)}
+
+\begin{eventbox}[title={Ereignis 1: Der letzte Filter (am Ende von Runde 1)},fonttitle=\bfseries]
+\textbf{Wirkung:} Die Wasserwerker verlieren sofort 2 Wasser-Marker (verunreinigt). Ihre Produktion sinkt auf 3 pro Runde. \textbf{Reparatur:} Das Reparaturteam der Techniker braucht einmalig 2 Energie und 1 Nahrung (an die Bank). Danach gilt die volle Produktion wieder ab der nächsten Produktionsphase. \textbf{Stabilität:} Ist die Reparatur bis zum Ende der nächsten Runde nicht bezahlt, $-2$. Wer die Kosten trägt, entscheiden die Gruppen (Techniker dürfen eine Gegenleistung verlangen).
+\end{eventbox}
+
+\ifkurz\else
+\begin{eventbox}[title={Ereignis 2: Unbekannte im Tunnel (Runde 2, nach der Regierungsbildung)},fonttitle=\bfseries]
+Die Konferenz (oder die gebildete Regierung) entscheidet bis zum Rundenende. \textbf{Ablehnen:} keine Kosten. \textbf{Aufnahme mit Quarantäne:} kostet 2 Nahrung, 2 Wasser, 1 Medikament, 1 Schutzmaterial. \textbf{Aufnahme ohne Quarantäne:} kostet 2 Nahrung, 2 Wasser. Wer bezahlt, entscheidet die Konferenz. \textbf{Würfeln Sie verdeckt} (nur bei Aufnahme): \textbf{1 bis 4:} Die Fremden sagen die Wahrheit, sie führen zu einem Lager, Sie legen \textbf{3 Energie} in den Gemeinschaftsvorrat (die Konferenz entscheidet über die Verteilung). \textbf{5 oder 6:} Die Fremden tragen eine Seuche. Mit Quarantäne: zusätzlich 1 Medikament. Ohne Quarantäne: 3 Medikamente und $-1$ Stabilität. Bei Ablehnung würfeln Sie nur zur Auflösung in der Auswertung (\enquote{Hätten Sie es gewusst?}). Nicht entschieden bis Rundenende: $-2$.
+\end{eventbox}
+\fi
+
+\begin{eventbox}[title={Ereignis 3: Der Notstand (\ifkurz Runde 2\else Runde 3\fi)},fonttitle=\bfseries]
+\textbf{Wirkung:} Die Energieproduktion beträgt in dieser Runde nur \textbf{3 statt 6}. Die Konferenz muss \ifkurz innerhalb von 3 Minuten \else innerhalb von 5 Minuten \fi verbindlich festlegen: wer über die Energieverteilung entscheidet, wie lange die Maßnahme gilt und wer sie kontrolliert. Ohne dokumentierten Beschluss $-2$ Stabilität. Die Konferenz darf dabei die Zwangsmaßnahme der Wächter legitimieren.
+\end{eventbox}
+
+\subsection*{Erwartete Engpässe (Probelauf)}
+Bei idealer Verteilung (alle Marker werden optimal getauscht) ergibt sich rechnerisch Folgendes. Reale Verläufe sind schlechter, weil Verhandeln Zeit kostet.
+\begin{itemize}
+  \item \textbf{Runde 1:} Alles reicht, aber nur durch Tausch. Energie hat mit 3 Resten den kleinsten Puffer.
+  \ifkurz
+  \item \textbf{Runde 2:} Notstand und Reparatur (2 Energie): Es fehlen 4 Energie (ohne Reparatur 2). Wasser und Nahrung reichen. Medikamente: 2 Rest.
+  \else
+  \item \textbf{Runde 2:} Reparatur (2 Energie, 1 Nahrung) und Aufnahme mit Quarantäne belasten Energie und Wasser: 1 Wasser fehlt, Energie reicht nur, wenn die Fremden die Wahrheit sagen (+3 Energie).
+  \item \textbf{Runde 3:} Der Notstand halbiert die Energieproduktion: etwa 3 Energie fehlen, Medikamente sind danach aufgebraucht.
+  \fi
+\end{itemize}
+Die Werte sind Spielwerte, keine Bedarfsberechnungen. Falls ein Kurs zu leicht oder zu schwer spielt, drehen Sie zuerst an der \emph{Energieproduktion der Techniker} und an den \emph{Krankheitskarten}.
+
+\subsection*{Moderation der Auswertung}
+Die SuS legen zuerst die Rollen ab. Lesen Sie die Stabilität vor (8 bis 10 stabil, 5 bis 7 angespannt, 1 bis 4 kritisch, 0 Zerfall) und lassen Sie die Geheimaufträge aufdecken. Ein Geheimauftrag zählt nur, wenn die Station nicht zerfallen ist (Stabilität mindestens 1).
+\ifkurz
+Wählen Sie drei Leitfragen:
+\else
+Wählen Sie drei bis vier Leitfragen:
+\fi
+\begin{itemize}
+  \item \textbf{Macht:} Hatte die Gruppe mit dem knappsten Gut automatisch die größte Macht?
+  \item \textbf{Gerechtigkeit:} Gerecht heißt gleich viel oder nach Bedarf?
+  \item \textbf{Demokratie:} Kann eine Mehrheit alles entscheiden oder braucht es Grenzen?
+  \item \textbf{Effizienz:} War eine zentrale Führung in der Krise handlungsfähiger?
+  \item \textbf{Abhängigkeit:} Wie haben die Abhängigkeiten die Wahl der Regierungsform beeinflusst?
+  \item \textbf{Legitimität:} Akzeptiert man eine Entscheidung eher, wenn man beteiligt war?
+\end{itemize}
+\textbf{Abschlussfrage:} \enquote{Hätten Sie dieselbe Regierungsform gewählt, wenn Ihre Gruppe eine andere Station kontrolliert hätte?}

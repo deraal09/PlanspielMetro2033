@@ -1,0 +1,92 @@
+Das Planspiel „Metro 2033: Die letzte Demokratie“ ist ein politisches Planspiel nach dem Vorbild der Inseldemokratie. Die Schülerinnen und Schüler stranden in der Metrostation „Endstation 7“. Fünf Gruppen kontrollieren je eine Station und ein lebenswichtiges Gut. Keine Gruppe kann allein überleben. Innerhalb von 48 Stunden Spielzeit müssen sie sich auf eine Regierungsform und auf Regeln für die Verteilung der knappen Güter einigen.
+
+## Lernziele
+
+Die Lernenden ...
+
+1. erklären, wie Knappheit, Abhängigkeit und Machtposition die Wahl einer Regierungsform beeinflussen,
+2. vergleichen Regierungsformen (direkte und repräsentative Demokratie, autoritäre Führung, Technokratie, Föderation) anhand von Kriterien wie Geschwindigkeit, Gerechtigkeit, Machtbegrenzung und Versorgungssicherheit,
+3. verhandeln Interessen, schließen Kompromisse und bewerten Legitimität und Stabilität des Ergebnisses,
+4. diskutieren, wie viel Macht Regierung und Sicherheitskräfte im Notstand erhalten dürfen.
+
+## Die fünf Gruppen
+
+- Hydroponiker (Gewächshaus und Pilzkeller): Nahrung
+- Wasserwerker (Pumpenraum und Filteranlage): Wasser
+- Techniker (Kraftwerk und Werkstatt): Energie
+- Sanitäter (Krankenstation): Medikamente
+- Wächter (Zugangsschleusen und Lager): Schutzmaterial
+
+Jede Gruppe startet nur mit ihrem eigenen Gut, braucht aber Betriebskosten in den anderen Gütern und muss deshalb mindestens drei andere Güter eintauschen. Zusätzlich erhält jede Gruppe eine Geheimkarte mit einem Vertragsziel, das erst in der Auswertung aufgedeckt wird.
+
+## Varianten
+
+- Kurzvariante (45 Minuten): zwei Runden zu je 24 Stunden Spielzeit, zwei Ereignisse („Der letzte Filter“, „Der Notstand“), Regierungsvertrag mit 4 Artikeln.
+- Vollvariante (90 Minuten): drei Runden zu je 16 Stunden Spielzeit, drei Ereignisse (zusätzlich „Unbekannte im Tunnel“ mit verdecktem Würfel), Regierungsvertrag mit 7 Artikeln, ausführliche Auswertung.
+
+Beide Varianten nutzen dieselben Materialien und Regeln.
+
+## Vorbereitung (ca. 20 Minuten)
+
+1. Schülermaterial ausdrucken: Regelkarte, Gruppenkarte, Bilanzblatt und Infokarten je Gruppe, dazu Arbeitsblatt, Stationsschilder und einmal den Regierungsvertrag.
+2. Marker auf festes Papier drucken, ausschneiden und nach Gut sortieren.
+3. Geheimkarten (verdeckt austeilen) sowie Ereignis- und Krankheitskarten (bleiben bei der Lehrkraft) ausschneiden.
+4. Raum einrichten: fünf Gruppentische als Stationen an den Wänden, in der Mitte der Konferenztisch („Metro-Konferenz“) mit Gemeinschaftsvorrat und Vertrag.
+5. Bereitlegen: Timer (Beamer-Countdown), Schalen oder Umschläge für die Marker, ein Magnet für die Stabilitätsleiste, in der Vollvariante ein Würfel.
+
+Die Lehrkraft ist Bank (Marker ausgeben und einsammeln), Stationslautsprecher (Durchsagen, Ereignisse) und Moderation. Sie entscheidet nicht über das Ergebnis.
+
+## Spielprinzip
+
+Alle Güter sind Marker. Jede Runde hat fünf Phasen:
+
+1. Produktion: Die Bank gibt die Produktionsmarker aus.
+2. Handel und Verhandlung: Nur die Delegation geht zum Konferenztisch.
+3. Politische Entscheidungen (ab Runde 2): Alle Gruppen beraten über gemeinsame Regeln.
+4. Betriebskosten: Jede Gruppe zahlt an die Bank.
+5. Krankheitskarte, Ereignis und Abrechnung.
+
+Wer nicht alle Betriebskosten zahlt, rutscht in Stufe 2 (Produktion in der nächsten Runde halbiert) oder Stufe 3 (Stillstand, 1 Stabilität weniger). Die Stabilität der Station startet bei 10. Sie sinkt bei Stillstand, unbezahlter Krankheitskarte, ungelösten Ereignissen oder einer Zwangsmaßnahme ohne Beschluss und steigt, wenn alle Gruppen im Normalbetrieb sind. Bei 0 zerfällt die Station und alle verlieren.
+
+Verträge sind bindend, aber nicht automatisch durchsetzbar. Ein Beschluss ersetzt keine Marker. Die Wächter dürfen einmal pro Spiel bis zu 2 Marker einer Gruppe einziehen, mit Konferenzbeschluss legitim, sonst −2 Stabilität.
+
+## Ablauf 45 Minuten
+
+1. Minute 0 bis 5, Zusammenbruch: Kurzdurchsage, Gruppen bilden, Material verteilen.
+2. Minute 5 bis 10, Gruppenberatung: Interessen, rote Linie, Wunsch-Regierungsform, Delegation. Geheimkarten austeilen.
+3. Minute 10 bis 22, Runde 1 (Freier Handel): Produktion, Handel ohne Regierung, Abrechnung, Ereignis „Der letzte Filter“.
+4. Minute 22 bis 38, Runde 2 (Ordnung und Krise): Konferenz, Vertrag Artikel 1 bis 4, Ereignis „Der Notstand“, Abrechnung, Unterschrift.
+5. Minute 38 bis 45, Auswertung: Rollen ablegen, Stabilität, Geheimaufträge, drei Leitfragen.
+
+## Ablauf 90 Minuten
+
+1. Minute 0 bis 8, Zusammenbruch: Durchsage, Gruppen bilden, Material und Regeln.
+2. Minute 8 bis 18, Gruppenberatung: Arbeitsblatt Aufgabe 1 bis 3. Geheimkarten austeilen.
+3. Minute 18 bis 32, Runde 1 (Freier Handel): Handel ohne Regierung, Ereignis „Der letzte Filter“.
+4. Minute 32 bis 52, Runde 2 (Regierungsbildung): Konferenz, Vertrag Artikel 1 bis 3, Ereignis „Unbekannte im Tunnel“.
+5. Minute 52 bis 70, Runde 3 (Krise): Ereignis „Der Notstand“, Vertrag Artikel 4 bis 7, Unterschrift.
+6. Minute 70 bis 88, Auswertung: Rollen ablegen, Stabilität, Geheimaufträge, Plenum.
+7. Minute 88 bis 90, Ausblick: Aufgabe 5 (Rückblick) als Hausaufgabe.
+
+## Auswertung
+
+Die Lernenden legen zuerst ihre Rollen ab. Die Lehrkraft liest die Stabilität vor (8 bis 10 stabil, 5 bis 7 angespannt, 1 bis 4 kritisch, 0 Zerfall) und lässt die Geheimaufträge aufdecken. Danach folgen drei bis vier Leitfragen:
+
+- Macht: Hatte die Gruppe mit dem knappsten Gut automatisch die größte Macht?
+- Gerechtigkeit: Heißt gerecht gleich viel oder nach Bedarf?
+- Demokratie: Kann eine Mehrheit alles entscheiden oder braucht es Grenzen?
+- Effizienz: War eine zentrale Führung in der Krise handlungsfähiger?
+- Legitimität: Akzeptiert man eine Entscheidung eher, wenn man beteiligt war?
+
+Abschlussfrage: Hätten Sie dieselbe Regierungsform gewählt, wenn Ihre Gruppe eine andere Station kontrolliert hätte?
+
+## Tipps
+
+- Gruppengröße: fünf Gruppen mit 4 bis 6 Personen, bei kleinen Kursen 3 bis 4.
+- Rollen: Buchführung, Delegation (2 bis 3 Personen) und Sprecher/in. Die Rollen dürfen wechseln.
+- Atmosphäre: gedimmtes Licht und leise Tunnelgeräusche, aber nicht zu laut.
+- Zeit sichtbar machen: Ein Beamer-Countdown erhöht den Druck beim Verhandeln und im Notstand.
+- Nicht eingreifen: Die Lehrkraft moderiert und entscheidet nicht über das Ergebnis.
+- Schwierigkeit anpassen: Spielt ein Kurs zu leicht oder zu schwer, zuerst die Energieproduktion der Techniker und die Krankheitskarten ändern.
+- Material: Marker auf festes Papier drucken, pro Gruppe ein Umschlag.
+- Nachbereitung: Aufgabe 5 (Rückblick) als Hausaufgabe oder schriftliche Sicherung.

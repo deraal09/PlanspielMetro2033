@@ -28,3 +28,7 @@ Thumbs.db
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+
+# Schullogo nicht einchecken (Repository ist öffentlich)
+material/latex/latex_exam_lib/bbz-logo.png
+material/**/*.pdf

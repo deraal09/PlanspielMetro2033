@@ -1,0 +1,77 @@
+% ============================================================
+% Eigene Vektorgrafiken (TikZ) -- frei von Fremdrechten
+% Piktogramme: \iconN \iconW \iconE \iconM \iconS  {Farbe}{Skalierung}
+% Banner:      \tunnelbanner     Raumplan: \raumplan
+% ============================================================
+
+% Pilz (Nahrung)
+\newcommand{\iconN}[2]{\begin{tikzpicture}[scale=#2,baseline=(current bounding box.center)]
+ \fill[#1] (-0.5,0.02) arc (180:0:0.5 and 0.46) -- cycle;
+ \fill[#1,rounded corners=1.5pt] (-0.16,-0.46) rectangle (0.16,0.02);
+\end{tikzpicture}}
+
+% Tropfen (Wasser)
+\newcommand{\iconW}[2]{\begin{tikzpicture}[scale=#2,baseline=(current bounding box.center)]
+ \fill[#1] (0,0.5) .. controls (0.1,0.25) and (0.36,0.1) .. (0.36,-0.12) arc (0:-180:0.36) .. controls (-0.36,0.1) and (-0.1,0.25) .. (0,0.5);
+\end{tikzpicture}}
+
+% Blitz (Energie)
+\newcommand{\iconE}[2]{\begin{tikzpicture}[scale=#2,baseline=(current bounding box.center)]
+ \fill[#1] (0.12,0.5) -- (-0.3,-0.06) -- (-0.04,-0.06) -- (-0.14,-0.5) -- (0.32,0.1) -- (0.05,0.1) -- cycle;
+\end{tikzpicture}}
+
+% Kreuz (Medikamente)
+\newcommand{\iconM}[2]{\begin{tikzpicture}[scale=#2,baseline=(current bounding box.center)]
+ \fill[#1] (-0.16,-0.46) rectangle (0.16,0.46);
+ \fill[#1] (-0.46,-0.16) rectangle (0.46,0.16);
+\end{tikzpicture}}
+
+% Schild (Schutzmaterial)
+\newcommand{\iconS}[2]{\begin{tikzpicture}[scale=#2,baseline=(current bounding box.center)]
+ \fill[#1] (-0.38,0.46) -- (0.38,0.46) -- (0.38,0.02) .. controls (0.38,-0.3) and (0.1,-0.42) .. (0,-0.5) .. controls (-0.1,-0.42) and (-0.38,-0.3) .. (-0.38,0.02) -- cycle;
+\end{tikzpicture}}
+
+% Tunnel-Banner (Breite 17,5 cm)
+\newcommand{\tunnelbanner}{%
+\begin{center}
+\begin{tikzpicture}[x=1cm,y=1cm]
+ \clip[rounded corners=2mm] (0,0) rectangle (17.5,3.8);
+ \fill[black!92] (0,0) rectangle (17.5,3.8);
+ \foreach \k in {0,...,6}{%
+   \pgfmathsetmacro{\f}{1-0.13*\k}
+   \pgfmathtruncatemacro{\pct}{88-9*\k}
+   \fill[black!\pct!white,rounded corners=2mm] ({8.75-9.2*\f},{1.9-2.2*\f}) rectangle ({8.75+9.2*\f},{1.9+2.2*\f});
+ }
+ \draw[black!35!white,line width=1.4pt] (5.2,0) -- (8.55,1.75);
+ \draw[black!35!white,line width=1.4pt] (12.3,0) -- (8.95,1.75);
+ \foreach \y in {0.2,0.65,1.05,1.4}{%
+   \pgfmathsetmacro{\xl}{5.2+(8.55-5.2)*\y/1.75}
+   \pgfmathsetmacro{\xr}{12.3-(12.3-8.95)*\y/1.75}
+   \draw[black!45!white,line width=1pt] ({\xl-0.35},\y) -- ({\xr+0.35},\y);
+ }
+ \foreach \f in {0.87,0.74,0.61,0.48}{%
+   \fill[warn,opacity=0.3] ({8.75-9.2*\f*0.93},{1.9+2.2*\f*0.55}) circle ({0.3*\f});
+   \fill[warn] ({8.75-9.2*\f*0.93},{1.9+2.2*\f*0.55}) circle ({0.11*\f});
+   \fill[warn,opacity=0.3] ({8.75+9.2*\f*0.93},{1.9+2.2*\f*0.55}) circle ({0.3*\f});
+   \fill[warn] ({8.75+9.2*\f*0.93},{1.9+2.2*\f*0.55}) circle ({0.11*\f});
+ }
+ \node[fill=warn,text=black,font=\bfseries\Large,inner xsep=4mm,inner ysep=1.8mm] at (8.75,3.05) {ENDSTATION 7};
+ \node[text=white,font=\small] at (8.75,2.45) {Die letzte Demokratie};
+\end{tikzpicture}
+\end{center}}
+
+% Raumplan (Klassenraum als Metrostation)
+\newcommand{\raumplan}{%
+\begin{center}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize\bfseries]
+ \draw[line width=1.2pt] (0,0) rectangle (17,7);
+ \node[draw=cN!80!black,fill=cN!15,minimum width=4.6cm,minimum height=1.4cm,align=center] (g1) at (2.6,6.0) {Station 1\\Hydroponiker};
+ \node[draw=cW!80!black,fill=cW!15,minimum width=4.6cm,minimum height=1.4cm,align=center] (g2) at (8.5,6.0) {Station 2\\Wasserwerker};
+ \node[draw=cE!80!black,fill=cE!15,minimum width=4.6cm,minimum height=1.4cm,align=center] (g3) at (14.4,6.0) {Station 3\\Techniker};
+ \node[draw=cM!80!black,fill=cM!15,minimum width=4.6cm,minimum height=1.4cm,align=center] (g4) at (2.6,1.0) {Station 4\\Sanitäter};
+ \node[draw=cS!80!black,fill=cS!15,minimum width=4.6cm,minimum height=1.4cm,align=center] (g5) at (14.4,1.0) {Station 5\\Wächter (am Eingang)};
+ \node[draw,ellipse,fill=warn!25,minimum width=5.6cm,minimum height=2.4cm,align=center] (konf) at (8.5,3.5) {Metro-Konferenz\\[-1pt]\footnotesize\mdseries Gemeinschaftsvorrat, Vertrag};
+ \node[draw,fill=black!8,minimum width=3.6cm,minimum height=1.1cm,align=center] (bank) at (8.5,0.8) {Bank (Lehrkraft)};
+ \foreach \g in {g1,g2,g3,g4,g5}{\draw[dashed,black!50] (\g) -- (konf);}
+\end{tikzpicture}
+\end{center}}

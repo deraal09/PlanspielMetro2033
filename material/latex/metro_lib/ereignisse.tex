@@ -1,0 +1,50 @@
+% ============================================================
+% Ereigniskarten und Krankheitskarten (Lehrkraft zieht und verliest)
+% ============================================================
+\clearpage
+\abschnitt{Ereigniskarten \textnormal{\normalsize (ausschneiden, verdeckt stapeln; Lehrkraft verliest)}}
+
+\small\setstretch{1.08}
+\begin{eventbox}[title={Ereignis 1: Der letzte Filter \hfill \normalfont Zeitpunkt: Ende von Runde 1},fonttitle=\bfseries]
+Ein Filter der Wasseranlage ist irreparabel beschädigt. Die Wasserproduktion sinkt auf die Hälfte (\textbf{3 statt 6} Marker pro Runde), und 2 Wasser-Marker sind verunreinigt und gehen verloren. Ein Ersatzteil aus der Werkstatt könnte die Anlage wiederherstellen. Das Reparaturteam der Techniker braucht dafür einmalig \textbf{2~\rE\ Energie und 1~\rN\ Nahrung}.\par\smallskip
+\textbf{Auftrag an alle Gruppen:} Entwickeln Sie eine gemeinsame Lösung. Wer bezahlt die Reparatur? Ist sie bis zum Ende der nächsten Runde nicht bezahlt, verliert die Station 2~Stabilität.\par\smallskip
+\textbf{Politische Frage:} Wer darf in einer Krise über knappe Ressourcen entscheiden?
+\end{eventbox}\par\medskip
+
+\ifkurz\else
+\begin{eventbox}[title={Ereignis 2: Unbekannte im Tunnel \hfill \normalfont Zeitpunkt: Runde 2, nach der Regierungsbildung},fonttitle=\bfseries]
+Eine Gruppe von zwölf Überlebenden erreicht den Zugang zur Station. Sie sind erschöpft, benötigen Wasser und Nahrung und berichten von einem weiteren bewohnbaren Metroabschnitt. Allerdings ist unklar, ob sie die Wahrheit sagen. Die Wächter fordern eine Quarantäne und eine gründliche Kontrolle. Die Sanitäter verlangen medizinische Versorgung. Die Hydroponiker warnen vor der ohnehin knappen Nahrung.\par\smallskip
+\textbf{Auftrag an die Regierung:} Entscheiden Sie bis zum Ende der Runde, ob und unter welchen Bedingungen die Fremden aufgenommen werden:\\
+\textbf{Ablehnen:} keine Kosten.\\
+\textbf{Aufnahme mit Quarantäne:} 2~\rN, 2~\rW, 1~\rM, 1~\rS.\\
+\textbf{Aufnahme ohne Quarantäne:} 2~\rN, 2~\rW.\\
+Wer bezahlt, entscheiden Sie. Ohne Entscheidung verliert die Station 2~Stabilität.\par\smallskip
+\textbf{Politische Frage:} Welche Rechte haben Menschen, die noch nicht zur Gemeinschaft gehören?
+\end{eventbox}\par\medskip
+\fi
+
+\begin{eventbox}[title={Ereignis \ifkurz 2\else 3\fi: Der Notstand \hfill \normalfont Zeitpunkt: \ifkurz Runde 2, nach Beginn der Konferenz\else Runde 3, zu Beginn\fi},fonttitle=\bfseries]
+Ein Stromausfall droht die Lüftung lahmzulegen. Die Energieproduktion beträgt in dieser Runde nur \textbf{3 statt 6} Marker. Die Techniker verlangen, sämtliche verfügbare Energie für die Reparatur einzusetzen. Die Hydroponiker warnen vor dem Verlust der Ernte. Die Sanitäter befürchten, dass die Krankenstation nicht mehr ausreichend versorgt werden kann.\par\smallskip
+\textbf{Auftrag an die Regierung:} Treffen Sie \ifkurz innerhalb von 3 Minuten \else innerhalb von 5 Minuten \fi eine verbindliche Entscheidung und halten Sie sie schriftlich fest: Wer entscheidet über die Energieverteilung? Wie lange gilt die Maßnahme? Wer kontrolliert sie? Ohne Beschluss verliert die Station 2~Stabilität.\par\smallskip
+\textbf{Politische Frage:} Wie viel Macht darf eine Regierung im Notstand erhalten?
+\end{eventbox}
+
+\clearpage
+\abschnitt{Krankheitskarten \textnormal{\normalsize (Lehrkraft zieht am Ende jeder Runde)}}
+Die Karte wird mit Medikamenten (\rM) aus \emph{beliebigen} Beständen bezahlt. Wird sie nicht vollständig bezahlt, verliert die Station 1~Stabilität.\par\medskip
+
+\begin{schneidbox}[title={Krankheitskarte Runde 1: Grippewelle},fonttitle=\bfseries]{cM}
+\Large Kosten: \textbf{3~\rM\ Medikamente}
+\end{schneidbox}\par\medskip
+\ifkurz
+\begin{schneidbox}[title={Krankheitskarte Runde 2: Fieberausbruch},fonttitle=\bfseries]{cM}
+\Large Kosten: \textbf{5~\rM\ Medikamente}
+\end{schneidbox}
+\else
+\begin{schneidbox}[title={Krankheitskarte Runde 2: Wundinfektionen},fonttitle=\bfseries]{cM}
+\Large Kosten: \textbf{4~\rM\ Medikamente}
+\end{schneidbox}\par\medskip
+\begin{schneidbox}[title={Krankheitskarte Runde 3: Fieberausbruch},fonttitle=\bfseries]{cM}
+\Large Kosten: \textbf{5~\rM\ Medikamente}
+\end{schneidbox}
+\fi

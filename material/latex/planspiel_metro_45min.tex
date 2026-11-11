@@ -1,0 +1,34 @@
+% !TEX program = xelatex
+\documentclass[a4paper, parskip=half, 11pt, DIV=12, twoside, headheight=40pt]{scrartcl}
+\input{latex_exam_lib/preamble.tex}
+\setromanfont{DejaVu Sans}
+\usepackage{lastpage}
+\usepackage[headsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ihead{Autor/in}
+\chead{Fach: Politik\\ Thema: Planspiel Metro 2033 -- 45 Minuten}
+\ohead{\IfFileExists{latex_exam_lib/bbz-logo.png}{\includegraphics[height=12.5mm]{latex_exam_lib/bbz-logo.png}}{}}
+\ofoot{\thepage/\pageref{LastPage}}
+\ifoot{\today}
+\cfoot{Schuljahr: 2026/27}
+
+\input{latex_exam_lib/exam_commands}
+
+% Variante: 45 Minuten (Kurzvariante)
+\newif\ifkurz
+\kurztrue
+\input{metro_lib/makros}
+
+\begin{document}
+
+\input{metro_lib/spielleitung}
+\input{metro_lib/story}
+\input{metro_lib/gruppen}
+\input{metro_lib/arbeitsblatt}
+\input{metro_lib/infokarten}
+\input{metro_lib/ereignisse}
+\input{metro_lib/material}
+\input{metro_lib/vertrag}
+
+\end{document}

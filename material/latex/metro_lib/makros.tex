@@ -1,0 +1,102 @@
+% ============================================================
+% Makros: Planspiel "Metro 2033: Die letzte Demokratie"
+% Wird von beiden Hauptdateien (45 / 90 Minuten) eingebunden.
+% Voraussetzung: \newif\ifkurz ist vorher definiert.
+% ============================================================
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[skins,breakable]{tcolorbox}
+\usetikzlibrary{calc,shapes.geometric}
+
+\emergencystretch=3em
+\setlist[itemize]{leftmargin=1.3em,itemsep=1pt,topsep=2pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=1pt,topsep=2pt,parsep=0pt}
+
+% ---------- Farben (je Gut / Gruppe) ----------
+\definecolor{cN}{RGB}{46,125,50}   % Nahrung
+\definecolor{cW}{RGB}{21,101,192}  % Wasser
+\definecolor{cE}{RGB}{214,120,0}   % Energie
+\definecolor{cM}{RGB}{198,40,40}   % Medikamente
+\definecolor{cS}{RGB}{85,85,85}    % Schutzmaterial
+\definecolor{warn}{RGB}{255,200,0}
+
+% ---------- Ressourcensymbole ----------
+\newcommand{\resdot}[2]{\tikz[baseline=(c.base)]\node[circle,fill=#1,text=white,inner sep=0pt,minimum size=3.8mm,font=\scriptsize\bfseries] (c) {#2};}
+\newcommand{\rN}{\resdot{cN}{N}}
+\newcommand{\rW}{\resdot{cW}{W}}
+\newcommand{\rE}{\resdot{cE}{E}}
+\newcommand{\rM}{\resdot{cM}{M}}
+\newcommand{\rS}{\resdot{cS}{S}}
+\newcommand{\phase}[1]{\tikz[baseline=(c.base)]\node[circle,draw,line width=0.6pt,inner sep=0pt,minimum size=4.2mm,font=\scriptsize\bfseries] (c) {#1};}
+
+% ---------- Kästen ----------
+\newtcolorbox{metrobox}[2][]{enhanced,breakable,colback=#2!6,colframe=#2!80!black,boxrule=0.9pt,arc=1.5mm,left=3mm,right=3mm,top=2mm,bottom=2mm,#1}
+\newtcolorbox{lkbox}[1][]{enhanced,breakable,colback=black!4,colframe=black!65,boxrule=0.8pt,arc=1.5mm,left=3mm,right=3mm,top=2mm,bottom=2mm,#1}
+\newtcolorbox{eventbox}[1][]{enhanced,breakable,colback=warn!14,colframe=black!85,boxrule=1.3pt,arc=1.5mm,left=3mm,right=3mm,top=2mm,bottom=2mm,#1}
+\newtcolorbox{schneidbox}[2][]{enhanced,breakable,colback=white,frame hidden,boxrule=0pt,arc=0mm,left=3mm,right=3mm,top=2mm,bottom=2mm,coltitle=black,colbacktitle=#2!15,fonttitle=\bfseries,overlay={\draw[dashed,line width=0.9pt,#2!70!black](frame.south west)rectangle(frame.north east);},#1}
+
+% Titelleiste einer Gruppenkarte: Farbe, Nummer, Name, Station
+\newcommand{\gruppentitel}[5]{%
+\begin{tcolorbox}[enhanced,colback=#1!85!black,colframe=#1!85!black,coltext=white,arc=1.5mm,boxrule=0pt,left=4mm,top=2.2mm,bottom=2.2mm]
+{\Large\bfseries Gruppe #2 \,--\, #3}\hfill #5\\[0.8mm] Station: #4
+\end{tcolorbox}\par\vspace{1mm}}
+
+% Zahlentabelle einer Gruppe: je 5 Zellen (N & W & E & M & S)
+\newcommand{\werte}[3]{%
+\par\noindent
+{\renewcommand{\arraystretch}{1.35}\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}l|c|c|c|c|c@{}}
+ & \rN & \rW & \rE & \rM & \rS \\ \hline
+Anfangsvorrat & #1 \\
+Produktion pro Runde & #2 \\
+Betriebskosten pro Runde & #3 \\
+\end{tabular}}\par\vspace{1mm}}
+
+% Marker (Ausschneidebogen): Farbe, Buchstabe, Beschriftung
+\newcommand{\markerblock}[3]{%
+\noindent{\bfseries #3}\par\vspace{1mm}\noindent
+\foreach \i in {1,...,\markeranzahl}{%
+ \tikz[baseline=(c.base)]\node[circle,draw=#1,fill=#1!12,line width=1.2pt,minimum size=10mm,text=#1!70!black,font=\normalsize\bfseries,inner sep=0pt] (c) {#2};\hspace{1.2mm}%
+ \ifnum\i=\markerzeile\par\vspace{1.2mm}\noindent\fi}%
+\par\vspace{3.5mm}}
+
+% Bilanzblock für eine Runde (Gruppen-Buchführung)
+\newcommand{\bilanzblock}[1]{%
+\par\medskip\noindent{\bfseries #1}\par\smallskip
+{\renewcommand{\arraystretch}{1}\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|p{6.4cm}|*{5}{>{\centering\arraybackslash}p{1.5cm}|}}
+\hline
+ & \rN & \rW & \rE & \rM & \rS \\ \hline
+\rule{0pt}{6mm}Vorrat zu Rundenbeginn (inkl. Produktion) & & & & & \\ \hline
+\rule{0pt}{6mm}Handel (+ erhalten, $-$ abgegeben) & & & & & \\ \hline
+\rule{0pt}{6mm}Betriebskosten ($-$) & & & & & \\ \hline
+\rule{0pt}{6mm}Krankheitskarte / Ereignis ($-$) & & & & & \\ \hline
+\rule{0pt}{6mm}\textbf{Vorrat am Rundenende} & & & & & \\ \hline
+\end{tabular}}\par}
+
+% Stabilitätsleiste 0..10
+\newcommand{\stabilitaetsleiste}{%
+\begin{center}
+\begin{tikzpicture}
+\foreach \i in {0,...,10}{%
+  \ifnum\i<1 \def\fc{red!55}\else\ifnum\i<5 \def\fc{orange!55}\else\ifnum\i<8 \def\fc{yellow!60}\else\def\fc{green!55!black!35}\fi\fi\fi
+  \draw[fill=\fc,line width=1pt] ({\i*1.58},0) rectangle ++(1.58,1.7);
+  \node[font=\Huge\bfseries] at ({\i*1.58+0.79},0.85) {\i};
+}
+\end{tikzpicture}
+\end{center}}
+
+% Schreiblinien, Checkbox
+\newcommand{\linien}[1]{\par\vspace{1mm}\edef\linienzahl{#1}\letterbox[6.8mm]{\linienzahl}\par\vspace{2mm}}
+\newcommand{\feld}{\Square\ }
+
+% Marker-Anzahl je Variante
+\ifkurz
+  \newcommand{\markeranzahl}{18}\newcommand{\markerzeile}{9}
+\else
+  \newcommand{\markeranzahl}{24}\newcommand{\markerzeile}{12}
+\fi
+
+\input{metro_lib/grafiken}
+\input{metro_lib/atmosphaere}

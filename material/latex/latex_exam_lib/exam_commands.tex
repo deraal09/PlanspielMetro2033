@@ -1,0 +1,43 @@
+% Aufgabenzaehler
+\newcounter{exercise}
+\newcounter{subexercise}
+\newcounter{subexercisenp}
+\newcounter{totalexampoints}
+\newcounter{exampoints}
+\newcounter{number}
+
+\newcommand{\addtoexampoints}[1]{\addtocounter{exampoints}{#1}\addtocounter{exampoints}{-1}\refstepcounter{exampoints}}
+\newcommand{\addtototalexampoints}[1]{\addtocounter{totalexampoints}{#1}\addtocounter{totalexampoints}{-1}\refstepcounter{totalexampoints}}
+\newcommand{\showtotalpoints}{\IfStrEq{\HidePoints}{ON} {}{von \ref{totalep}}}
+
+\newcommand{\answer}[2]{\IfStrEq{\ANSWER}{ON}{\color{blue}{#1}\color{black}}{#2}}
+% Aufgaben werden Automatisch formatiert und nummeriert.
+% Aufgabe
+\newcommand{\exercise}[5]{\refstepcounter{exercise}\setcounter{exampoints}{0}\setcounter{subexercise}{0}\setcounter{subexercisenp}{0}\vspace{2.5mm}\textbf{\large Aufgabe\, \theexercise~}\IfStrEq{\HidePoints}{OFF}{\ifx\noexpand#2\noexpand\empty  \else \addtoexampoints{#2} \label{\theexercise} \addtototalexampoints{#2}\label{totalep}\fi (\ref{\theexercise}\,Pkt.)}{}\par{#1}\par\vspace{2.5mm}{#3}\answer{#5}{#4}}
+% Unteraufgabe
+\newcommand{\subexercise}[5]{\refstepcounter{subexercise}\begin{tabu}to \textwidth{X[2,l]X[26,l]X[5,l]}\theexercise.\thesubexercise)&{#1} & \IfStrEq{\HidePoints}{OFF}{~(#2\,Pkt.)}{}\end{tabu}\\{#3}\answer{#5}{#4} \addtoexampoints{#2}\label{\theexercise} \addtototalexampoints{#2}\label{totalep}}
+\newcommand{\subexercisenp}[5]{\refstepcounter{subexercisenp}\begin{tabu}to \textwidth{X[1.5,l]X[30,l]}\theexercise.\thesubexercisenp)&{#1}\end{tabu}\\{#3}\answer{#5}{#4}}
+
+% Linien
+\newcommand{\letterbox}[2][7mm]{%
+  \begin{tikzpicture}[gray]
+  \path[use as bounding box](0,0)rectangle(\linewidth,-#2*#1-0.5\pgflinewidth);
+   \foreach \n in {1,...,#2}\draw(0 ,-#1*\n )--(\linewidth,-#1*\n );
+  \end{tikzpicture}}
+
+% Karierte Flaeche
+\newcommand{\plaid}[2][0.5cm]{%
+   \begin{tikzpicture}[gray,step=#1]
+     \pgfmathtruncatemacro\quantity{(\linewidth-\pgflinewidth)/#1} % maximale Anzahl Kästchen pro Zeile
+     \draw (0,0) rectangle (\quantity*#1,#2*#1) (0,0) grid (\quantity*#1,#2*#1);
+   \end{tikzpicture}
+}
+
+\newcommand{\plaidNotice}{\clearscrheadfoot\ihead{Name:\hspace{105mm}}\ohead{\IfFileExists{latex_exam_lib/bbz-logo.png}{\includegraphics[height=12.5mm]{latex_exam_lib/bbz-logo.png}}{}}\section*{Notizen:}\plaid{39}\clearpage\section*{Notizen:}\plaid{39}}
+\newcommand{\lineNotice}{\clearscrheadfoot\ihead{Name:\hspace{105mm}}\ohead{\IfFileExists{latex_exam_lib/bbz-logo.png}{\includegraphics[height=12.5mm]{latex_exam_lib/bbz-logo.png}}{}}\section*{Notizen:}\letterbox{26}\clearpage\section*{Notizen:}\letterbox{26}}
+\newcommand{\cloze}[2][10]{\answer{#2\ }{\forloop{number}{0}{\value{number} < #1}{~\_}}}
+\newcommand{\oneline}[1]{\begin{tikzpicture}\draw[] node[above]{#1} (-2,0) -- (0.87\textwidth,0);\end{tikzpicture}}
+\newcommand{\varline}[4][above]{\begin{tikzpicture}\draw[] node[#1]{#2} (#3,0) -- (#4\textwidth,0);\end{tikzpicture}}
+\newcommand{\points}[1]{\textcolor{red}{(#1\,P)}}
+\newcommand{\newspaper}[2]{\begin{minipage}{0.495\textwidth}#1\end{minipage}\hspace{0.01\textwidth}\begin{minipage}{0.495\textwidth}#2\end{minipage}}
+\newcommand{\leftBlank}{\vfill This page intentionally left blank! \vfill \clearpage}
